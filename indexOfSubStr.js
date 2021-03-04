@@ -1,4 +1,4 @@
-// With an object and Reduce
+// With an object and Reduce.
 
 function indexOf(str, subStr) {
   const neededLen = subStr.length - 1;
@@ -6,7 +6,7 @@ function indexOf(str, subStr) {
   const strMap = str.reduce((acc, _, i) => {
     let strKey = '';
     if (str[i + neededLen]) {
-      for (j = 0; j < subStr.length; j++) {
+      for (let j = 0; j < subStr.length; j++) {
         strKey += str[i + j];
       }
       return { ...acc, [strKey]: i };
@@ -21,15 +21,15 @@ function indexOf(str, subStr) {
   return -1;
 }
 
-// The traditional way
+// The traditional way.
 
 function tradIndexOf(str, subeStr) {
-  for (var i = 0; i < str.length; i++) {
-    for (var q = 0; q < subeStr.length; q++) {
-      if (str[i + q] !== subeStr[q]) {
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < subeStr.length; j++) {
+      if (str[i + j] !== subeStr[j]) {
         break;
       }
-      if (q === subeStr.length - 1) {
+      if (j === subeStr.length - 1) {
         return i;
       }
     }
@@ -37,7 +37,10 @@ function tradIndexOf(str, subeStr) {
   return -1;
 }
 
-const res = indexOf(['a', 'b', 'c', 'a', 'b', 'd'], ['a', 'b', 'd']);
-const res2 = tradIndexOf(['a', 'b', 'c', 'a', 'b', 'd'], ['a', 'b', 'd']);
+const strArr = ['a', 'b', 'c', 'a', 'b', 'd'];
+const subStrArr = ['a', 'b', 'd'];
+
+const res = indexOf(strArr, subStrArr);
+const res2 = tradIndexOf(strArr, subStrArr);
 console.log('Index', res);
 console.log('Index', res2);
