@@ -1,3 +1,5 @@
+// With an object and Reduce
+
 function indexOf(str, subStr) {
   const neededLen = subStr.length - 1;
 
@@ -19,5 +21,23 @@ function indexOf(str, subStr) {
   return -1;
 }
 
+// The traditional way
+
+function tradIndexOf(str, subeStr) {
+  for (var i = 0; i < str.length; i++) {
+    for (var q = 0; q < subeStr.length; q++) {
+      if (str[i + q] !== subeStr[q]) {
+        break;
+      }
+      if (q === subeStr.length - 1) {
+        return i;
+      }
+    }
+  }
+  return -1;
+}
+
 const res = indexOf(['a', 'b', 'c', 'a', 'b', 'd'], ['a', 'b', 'd']);
+const res2 = tradIndexOf(['a', 'b', 'c', 'a', 'b', 'd'], ['a', 'b', 'd']);
 console.log('Index', res);
+console.log('Index', res2);
