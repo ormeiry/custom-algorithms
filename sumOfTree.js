@@ -2,7 +2,7 @@
 // all the nodes in the tree (left and right). It's a recursive function.
 
 function sumOfTree(nodeObj) {
-  if (!nodeObj) return 0;
+  if (!nodeObj || !nodeObj.val) return 0;
   return nodeObj.val + sumOfTree(nodeObj.left) + sumOfTree(nodeObj.right);
 }
 
@@ -43,4 +43,11 @@ const tree = {
   },
 };
 
+const emptyTree = {};
+const anotherTree = {
+  val: -2,
+};
+
 console.log(sumOfTree(tree));
+console.log(sumOfTree(emptyTree));
+console.log(sumOfTree(anotherTree));
