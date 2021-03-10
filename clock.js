@@ -1,3 +1,6 @@
+// Given 4 numbers 0 - 9,  creating the maximum time.
+// 1, 2, 3, 4 -> 23:41
+
 function time(A, B, C, D) {
   const clock = {
     leftHour: { max: 2, startPlacing: true },
