@@ -1,3 +1,6 @@
+// Given an array of chars, and an sub array of chars
+// it finds the start index if the sub array found.
+
 // With an object and Reduce.
 
 function indexOf(str, subStr) {
