@@ -9,7 +9,7 @@ function callSearch(funcToRun, duration) {
   };
 }
 
-const func = () => console.log('Sending GET Request...');
+const func = () => console.log('Sending a Request to the server...');
 const search = callSearch(func, 1000);
 search();
 search();
