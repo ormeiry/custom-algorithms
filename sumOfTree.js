@@ -44,6 +44,7 @@ const tree = {
 };
 
 const emptyTree = {};
+
 const anotherTree = {
   val: -2,
 };
