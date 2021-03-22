@@ -1,3 +1,3 @@
 # custom-algorithms
 
-### Taking simple tasks and trying to create an algorithm for them using JS.
+### Taking simple tasks & coding problems and creating custom algorithm for them using JS.
