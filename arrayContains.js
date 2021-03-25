@@ -3,7 +3,7 @@
 
 function commonArrItem(arr1, arr2) {
   if (!Array.isArray(arr1) || !Array.isArray(arr2)) return 'Invalid Input';
-  if (!arr1.length || !arr1.length) return false;
+  if (!arr1.length || !arr2.length) return false;
 
   const itemsMap = {};
 
