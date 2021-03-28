@@ -1,4 +1,8 @@
-// onChange ->
+// When an app has a search bar that sends a request to
+// the server for each letter to find a match, we want to
+// wait some time for the user to finish typing, so there will be
+// less calls to the server.
+
 function callSearch(funcToRun, duration) {
   let timerID;
   return function () {
