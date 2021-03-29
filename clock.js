@@ -1,4 +1,4 @@
-// Given 4 numbers 0 - 9,  creating the maximum time.
+// Given 4 numbers 0 - 9,  create the maximum possible time of a 24 hours clock.
 // 1, 2, 3, 4 -> 23:41
 
 function time(A, B, C, D) {
